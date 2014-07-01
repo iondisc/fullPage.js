@@ -176,7 +176,9 @@
 
 		//creating the navigation dots
 		if (options.navigation) {
-			$('body').append('<div id="fp-nav"><ul></ul></div>');
+			if ($("#fp-nav").length === 0) {
+				$('body').append('<div id="fp-nav"><ul></ul></div>');
+			}
 			var nav = $('#fp-nav');
 
 			nav.css('color', options.navigationColor);
